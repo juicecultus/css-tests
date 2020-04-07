@@ -60,11 +60,13 @@ a {
 }
 
 h1 {
-  color: #fcc0d8;
+  /* color: #fcc0d8; */
+  color: black;
 }
 
 h2 {
-  color: #fcc0d8;
+  /* color: #fcc0d8; */
+  color: black;
 }
 
 h1,

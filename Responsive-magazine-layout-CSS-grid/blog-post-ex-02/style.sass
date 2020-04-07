@@ -1,0 +1,118 @@
+// SETTINGS
+
+$primary: #333
+$secondary: #fff
+$cta: tomato
+
+=mq
+	@media (min-width: 48em)
+		@content
+
+
+// TYPOGRAPHY
+
+@import 'https://fonts.googleapis.com/css?family=Lato:300,400,700'
+
+html
+	font: 400 1em/1.4 'Lato', sans-serif
+	color: $primary
+	-webkit-font-smoothing: antialiased
+
+h1
+	margin: 0 0 16rem
+	text-transform: uppercase
+	text-align: center
+	// Set a viewport-relative font-size once for the whole
+	// <h1>. Child elements will be sized using em's, so they
+	// will scale with this element regardlessof it's font-size
+	font-size: calc(55vh + 55vw)
+
+.jumbo
+	display: block
+	margin: -0.25em 0 0 // move up a little
+	line-height: 0.875
+	font-weight: 300
+	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/5175/photo-1452117774045-dfd7a5e9718c.jpeg')
+	background-repeat: no-repeat
+	// Trial-and error positioning and sizing
+	background-size: 0.39em auto
+	background-position: 53% 87.5%
+
+.sign
+	display: block
+	font-size: 0.125em
+	margin: -3.2em 0 0 // tweak position to it's inside the '6'
+
+.sign__text
+	background-color: $primary
+	color: $secondary
+	display: inline-block
+	padding: 0 0.3em 0.1em
+	line-height: 1
+	position: relative
+	margin: 0 0 0.45em
+	// Generate the bottom border which is slightly wider
+	// than the text
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0.08em
+		border-top: 0.04em solid
+		left: 0.2em
+		right: 0.2em
+
+// Had a hard time coming up with proper classnames here...
+.subjumbo
+	display: block
+	text-decoration: underline
+	font-size: 0.03em
+	text-shadow: 0.07em 0.05em 0 $secondary
+
+.section
+	p
+		line-height: 1.5
+		+mq
+			column-count: 2
+			column-gap: 1em
+			line-height: 1.33 // shorter lines of text, so lower line-height
+	
+	
+// Not too happy with this technique: place an inline-block
+// element inside a block element to get the bottom-border
+// to be the right width (like an underline)
+.section__title
+	text-align: center
+	font-size: 1.15em
+
+.section__innertitle
+	text-transform: uppercase
+	font-weight: 400
+	border-bottom: 0.15em solid
+
+a
+	color: $cta
+
+
+// LAYOUT
+
+html
+	background: $secondary
+
+body
+	margin: 0
+	+mq
+		padding: 1em
+
+.page
+	padding: 1em
+	margin: 1em
+	border: 1px solid
+	max-width: 44em
+	+mq
+		padding: 3em 5em
+		margin-right: auto
+		margin-left: auto
+	
+.footer
+	margin-top: 3em
+	text-align: center

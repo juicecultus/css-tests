@@ -1,0 +1,65 @@
+// ---------------------------------------------
+// DUMMY CONTENT
+// ---------------------------------------------
+hr {
+  height: 6px;
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+  &:last-child {
+    margin-right: 60%;
+  }
+  &.image {
+    padding-bottom: 50%;
+  }
+}
+
+// ---------------------------------------------
+// STYLE
+// ---------------------------------------------
+.page {
+  background: #cecece;
+}
+
+.article {
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 20px 20px rgba(0, 0, 0, 0.05);
+}
+
+// ---------------------------------------------
+// LAYOUT
+// ---------------------------------------------
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+// .archive {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+//   grid-gap: 1em;
+// }
+
+.archive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-gap: 32px;
+  grid-gap: 1em;
+  grid-auto-flow: dense;
+}
+
+.article {
+  padding: 1em;
+  /* Extra-wide grid-posts */
+  &:nth-child(31n + 1) {grid-column: 1 / -1;}
+  &:nth-child(16n + 2) {grid-column: -3 / -1;}
+  &:nth-child(16n + 10) {grid-column: 1 / -2;}
+}
+
+/* Single column display for phones */
+@media (max-width: 459px) {
+  .archive {
+    display: flex;
+    flex-direction: column;
+  }
+}

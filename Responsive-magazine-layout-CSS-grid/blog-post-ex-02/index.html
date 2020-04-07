@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>6 brands for the summer - Magazine layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="page">
+      <article>
+        <header class="header"></header>
+        <h1>
+          <span class="jumbo">6 </span
+          ><span class="sign"><span class="sign__text">brands </span></span
+          ><span class="subjumbo">for the summer</span>
+        </h1>
+        <section class="section">
+          <h2 class="section__title">
+            <span class="section__innertitle">The inner workings</span>
+          </h2>
+          <p>
+            The first step was to find a font which had a number &lsquo;6&rsquo;
+            that was almost perfectly circular. The font of choice in this case
+            is Lato. The next step is to make the image fit inside the number.
+            The trick is to pick an image and add it as a background-image of
+            the number. The sizing is relatively easy by setting the
+            background-size in em value. The positioning is
+            trial&ndash;and&ndash;error, but doable. Another trick is to give
+            the &lt;h1&gt; a viewport-relative font-size and style the inner
+            elements (the &lsquo;6&rsquo;, &lsquo;brands&rsquo; and &lsquo;for
+            the summer&rsquo;) with relative units, like ems, so they will
+            always scale with the size of the title. (The font-sizes aren't
+            bullet proof on large screens, but you get the idea)
+          </p>
+        </section>
+        <footer class="footer">
+          <small
+            >Another
+            <a
+              href="https://codepen.io/search/pens?q=magazine+layout&amp;limit=all&amp;type=type-pens"
+              >magazine layout</a
+            >
+            brought to you by
+            <a href="https://codepen.io/bartveneman"
+              >a dude who likes to bring magazine layouts to the web</a
+            >. Image taken from
+            <a href="https://unsplash.com/photos/RunDjvjvtoI"
+              >Unsplash</a
+            ></small
+          >
+        </footer>
+      </article>
+    </div>
+    <!-- partial -->
+  </body>
+</html>
